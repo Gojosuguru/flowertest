@@ -56,7 +56,7 @@
         flower_radial_shape += _noise * radius_noise;
 
         float flower_radius_grow = min(20000. * u_stop_time, 1.);
-        flower_radius_grow = 1. / flower_radius_grow;
+        flower_radius_grow = 2. / flower_radius_grow;
 
         float flower_shape = 1. - smoothstep(0., _size * flower_sectoral_shape, _outline * flower_radius_grow * flower_radial_shape);
         flower_shape *= (1. - u_moving);
